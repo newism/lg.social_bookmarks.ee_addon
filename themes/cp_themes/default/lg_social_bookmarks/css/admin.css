@@ -1,0 +1,9 @@
+#social-sites{ color:#333; list-style-type:none; overflow:auto; margin:1.5em 0; padding:0;}
+#social-sites li{ background: #fff url("../img/btn-inactive.png") no-repeat top left; float:left; font-size:11px; margin-bottom:5px; margin-right:5px;}
+#social-sites li:hover{background-image:url("../img/btn-inactive-hover.png");}
+#social-sites li.active{background-image:url("../img/btn-active.png"); color:#fff;}
+#social-sites li.active:hover{background-image:url("../img/btn-active-hover.png");}
+#social-sites li * {vertical-align:middle; margin:0;}
+#social-sites li label{display:block; padding:7px 5px 5px 26px; height:16px; width:129px; cursor:pointer;}
+#social-sites li img {margin:0 5px; position:relative; top:-1px; height:16px; width:16px;}
+#social-sites li input {position:absolute;left:-3000px;}
