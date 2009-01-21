@@ -751,6 +751,22 @@ See: " . LG_SB_docs_url ." for more information.
 	*/
 	function lg_addon_update_register_addon($addons)
 	{
+		global $EXT;
+		// -- Check if we're not the only one using this hook
+		if($EXT->last_call !== FALSE)
+			$addons = $EXT->last_call;
+
+		// add a new addon
+		// the key must match the id attribute in the source xml
+		// the value must be the addons current version
+		if($this->settings['check_for_updates'] == 'y')
+		{
+			$addons[LG_SB_addon_id] = $this->version;
+		}
+
+		return $addons;
+	}
+
 }
 
 ?>
